@@ -14,7 +14,8 @@
             return isPrime.answers[value];
         }
         var prime = value != 1; // 1 can never be prime
-        for (var i = 2; i < value; i++) {
+        var limit = Math.sqrt(value) + 1 // number is prime if no divisor is found in this limit
+        for (var i = 2; i < limit; i++) {
             if (value % i == 0) {
                 prime = false;
                 break;
